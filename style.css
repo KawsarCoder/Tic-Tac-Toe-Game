@@ -1,0 +1,99 @@
+/* body style */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* container style  */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to left, blueviolet, royalblue);
+  font-family: Arial, sans-serif;
+}
+
+/* board style  */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 300px;
+  height: 300px;
+  box-shadow: 0px 0px 15px 5px lightsteelblue;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+div {
+  color: orchid;
+  font-weight: bold;
+}
+
+/* cell style  */
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* cell hover effect  */
+.cell:hover {
+  background-color: #f2f2f2;
+}
+
+.cell.X {
+  color: #ff6b6b;
+}
+
+.cell.O {
+  color: #4ecdc4;
+}
+
+/* pop up message style  */
+.message {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.message.win {
+  color: #4ecdc4;
+}
+
+/* pop message box style  */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: royalblue;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 10px;
+  z-index: 9999;
+  animation: popupAnimation 1s ease-in-out;
+}
+
+/* pop up animation  */
+@keyframes popupAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
